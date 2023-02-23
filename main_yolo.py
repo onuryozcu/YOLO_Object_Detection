@@ -4,14 +4,11 @@ import numpy as np
 
 net=cv2.dnn.readNet("veri/yolov3-tiny.weights","veri/yolov3-tiny.cfg")
 
-
 classes=[]
 with open("veri/coco.names","r") as f:
     read=f.readlines()
 for i in range(len(read)):
     classes.append(read[i].strip("\n"))
-
-
 
 layer_names=net.getLayerNames()
 output_layers=[]
@@ -25,8 +22,6 @@ height,width,channels=img.shape
 
 
 blob=cv2.dnn.blobFromImage(img,0.00392,(600,600),(0,0,0),True,crop=False)
-
-
 
 net.setInput(blob)
 outs=net.forward(output_layers)
