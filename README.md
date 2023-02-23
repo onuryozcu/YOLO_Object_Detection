@@ -1,5 +1,8 @@
 # YOLO Object Detection
 
+Yolov3 weights are not inclede in repo. 
+For this reason u should download on yolo web.
+
 <br>
 <br>
 <p align="center">
